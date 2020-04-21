@@ -1,6 +1,6 @@
 # Python-UnitTest-Selenium
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
----
+--- 
 
 ### Environment Setup
 
@@ -40,7 +40,7 @@
     - Run following command
     * Execution
     ```
-    $ python lambdatest_test.py
+    $ python lambdatest_test.py or nosetests test_sample.py
     ```
 
 #####  Routing traffic through your local machine
