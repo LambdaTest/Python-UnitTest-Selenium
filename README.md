@@ -97,7 +97,7 @@ pytest-xdist
 
 
 
-Below we see a screenshot that depicts our Pytest code is running over different browsers i.e Chrome, Firefox and Safari on the LambdaTest Selenium Grid Platform. The results of the test script execution along with the logs can be accessed from the LambdaTest Automation dashboard.
+Below we see a screenshot that depicts our UnitTest code is running over different browsers i.e Chrome, Firefox and Safari on the LambdaTest Selenium Grid Platform. The results of the test script execution along with the logs can be accessed from the LambdaTest Automation dashboard.
 
 
 ![alttext](https://github.com/Apoorvlt/test/blob/master/unitcap.PNG)
