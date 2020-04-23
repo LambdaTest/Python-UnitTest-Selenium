@@ -28,7 +28,7 @@
 
 ### 3. Setup
 
- * Clone [Python-Behave-Selenium](https://github.com/LambdaTest/python-behave-selenium.git) from GitHub.
+ * Clone [Python-UnitTest-Selenium](https://github.com/LambdaTest/Python-UnitTest-Selenium.git) from GitHub.
  * Navigate to the cloned directory
  * Install project dependencies by running command:
  
@@ -39,9 +39,11 @@
  Requirements.txt file includes the following:
  
  ```
-Paver==1.3.4
-selenium==3.141.0
-behave==1.2.6
+ConfigParser
+selenium>2.5
+pytest
+nose
+pytest-xdist
 ```
 ### Environment Setup
 
