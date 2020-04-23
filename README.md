@@ -47,38 +47,13 @@ pytest
 nose
 pytest-xdist
 ```
-### Environment Setup
+## Test Scenario
 
-1. Global Dependencies   
-   
-   -Windows
-   * Download the latest python installer for Windows: http://sourceforge.net/projects/pywin32/files/pywin32/
-   * Run the installer and follow the setup wizard to install Python
-   
-   -Linux/Mac
-   * Run python --version to see which python version is currently installed, make sure it is 2.5.X or above.
-   * OS X, Ubuntu and most other Linux distro's come with Python pre-installed.
-   
-2. Lambdatest Credentials
-    * Set LambdaTest username and access key in environment variables. It can be obtained from [LambdaTest dashboard](https://automation.lambdatest.com/)    
-    example:
-    - For linux/mac
-    ```
-    export LT_USERNAME="YOUR_USERNAME"
-    export LT_ACCESS_KEY="YOUR ACCESS KEY"
-    
-    ```
-    - For Windows
-    ```
-    set LT_USERNAME="YOUR_USERNAME"
-    set LT_ACCESS_KEY="YOUR ACCESS KEY"
-    
-    ```
-3. Setup
-    * Clone [Python-UnitTest-Selenium](https://github.com/LambdaTest/Python-UnitTest-Selenium.git) from GitHub.
-    * Navigate to the cloned directory
-    * Install project dependencies by running command `pip install -r requirements.txt`
-    
+### Single Test
+
+In our demonstration, we will be creating a script that uses the Selenium WebDriver to click check boxes and add button. If assert returns true, it indicates that the test case passed successfully and will show up in the automation logs dashboard else if assert returns false, the test case fails, and the errors will be displayed in the automation logs.
+
+You have successfully configured your project and are ready to execute your first UnitTest selenium testing script. Here is the  file for UnitTest selenium Testing. Lets call it <code>config.cfg</code>.
 4. Running Tests
     * To Start Test:
     - Navigate to Python-UnitTest-Selenium
