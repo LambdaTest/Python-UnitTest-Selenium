@@ -53,14 +53,72 @@ pytest-xdist
 
 In our demonstration, we will be creating a script that uses the Selenium WebDriver to click check boxes and add button. If assert returns true, it indicates that the test case passed successfully and will show up in the automation logs dashboard else if assert returns false, the test case fails, and the errors will be displayed in the automation logs.
 
-You have successfully configured your project and are ready to execute your first UnitTest selenium testing script. Here is the  file for UnitTest selenium Testing. Lets call it <code>config.cfg</code>.
-4. Running Tests
-    * To Start Test:
-    - Navigate to Python-UnitTest-Selenium
-    - Run following command
-    * Execution
+You have successfully configured your project and are ready to execute your first UnitTest selenium testing script. Here is the  file for UnitTest selenium Testing. Lets call it <code>lambdatest_test.py</code>.
+
+```
+import os
+import unittest
+import sys
+from selenium import webdriver
+
+username = os.environ.get("LT_USERNAME")
+access_key = os.environ.get("LT_ACCESS_KEY")
+
+class FirstSampleTest(unittest.TestCase):
+
+    # setUp runs before each test case
+    def setUp(self):
+        desired_caps = {
+            "build": 'unittest sample build',
+            "name": 'Py-unittest',
+            "platform": 'Windows 10',
+            "browserName": 'firefox',
+            "version": '73'
+        }
+        self.driver = webdriver.Remote(
+           command_executor="http://{}:{}@hub.lambdatest.com:80/wd/hub".format(username, access_key),
+           desired_capabilities= desired_caps)
+
+
+# tearDown runs after each test case
+    def tearDown(self):
+        self.driver.quit()
+
+    def test_unit_user_should_able_to_add_item(self):
+        # try:
+        driver = self.driver
+
+        # Url
+        driver.get("https://lambdatest.github.io/sample-todo-app/")
+
+        # Click on check box
+        check_box_one = driver.find_element_by_name("li1")
+        check_box_one.click()
+
+        # Click on check box
+        check_box_two = driver.find_element_by_name("li2")
+        check_box_two.click()
+
+        # Enter item in textfield
+        textfield = driver.find_element_by_id("sampletodotext")
+        textfield.send_keys("Yey, Let's add it to list")
+
+        # Click on add button
+        add_button = driver.find_element_by_id("addbutton")
+        add_button.click()
+
+        # Verified added item
+        added_item = driver.find_element_by_xpath("//span[@class='done-false']").text
+        print (added_item)
+
+if __name__ == "__main__":
+    unittest.main()
+    
+ ```
+#### To run file  :
+
     ```
-    $ python lambdatest_test.py or nosetests test_sample.py
+    python lambdatest_test.py or nosetests lambdatest_test.py
     ```
 
 ##  Routing traffic through your local machine using Lambdatest
