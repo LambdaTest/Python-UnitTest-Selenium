@@ -2,6 +2,8 @@
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
 --- 
 
+![logo](https://github.com/Apoorvlt/test/blob/master/logo.PNG)
+
 ## Prerequisites for Python Behave tutorial 
 
 ### 1. Python Installation
@@ -98,7 +100,7 @@ pytest-xdist
 Below we see a screenshot that depicts our Pytest code is running over different browsers i.e Chrome, Firefox and Safari on the LambdaTest Selenium Grid Platform. The results of the test script execution along with the logs can be accessed from the LambdaTest Automation dashboard.
 
 
-![alttext](https://github.com/Apoorvlt/test/blob/master/Capture.PNG)
+![alttext](https://github.com/Apoorvlt/test/blob/master/unitcap.PNG)
 
 
 
