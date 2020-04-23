@@ -117,9 +117,10 @@ if __name__ == "__main__":
  ```
 #### To run file  :
 
-    ```
-    python lambdatest_test.py or nosetests lambdatest_test.py
-    ```
+```
+ python lambdatest_test.py or nosetests lambdatest_test.py
+```
+ 
 
 ##  Routing traffic through your local machine using Lambdatest
 - Set tunnel value to `True` in test capabilities
