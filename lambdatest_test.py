@@ -6,23 +6,31 @@ from selenium import webdriver
 username = os.environ.get("LT_USERNAME")
 access_key = os.environ.get("LT_ACCESS_KEY")
 
+
 class FirstSampleTest(unittest.TestCase):
 
     # setUp runs before each test case
     def setUp(self):
         desired_caps = {
-            "build": 'unittest sample build',
-            "name": 'Py-UnitTest',
-            "platform": 'Windows 10',
-            "browserName": 'firefox',
-            "version": 'latest'
+            'LT:Options': {
+                "user": username,
+                "accessKey": access_key,
+                "build": "UnitTest-Selenium-Sample",
+                "name": "UnitTest-Selenium-Test",
+                "platformName": "Windows 11",
+                "selenium_version": "4.0.0"
+            },
+            "browserName": "Chrome",
+            "browserVersion": "latest",
         }
+
         self.driver = webdriver.Remote(
-           command_executor="http://{}:{}@hub.lambdatest.com:80/wd/hub".format(username, access_key),
-           desired_capabilities= desired_caps)
+            command_executor="http://hub.lambdatest.com:80/wd/hub",
+            desired_capabilities=desired_caps)
 
 
 # tearDown runs after each test case
+
     def tearDown(self):
         self.driver.quit()
 
@@ -50,8 +58,10 @@ class FirstSampleTest(unittest.TestCase):
         add_button.click()
 
         # Verified added item
-        added_item = driver.find_element_by_xpath("//span[@class='done-false']").text
-        print (added_item)
+        added_item = driver.find_element_by_xpath(
+            "//span[@class='done-false']").text
+        print(added_item)
+
 
 if __name__ == "__main__":
     unittest.main()

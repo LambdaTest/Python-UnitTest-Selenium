@@ -40,7 +40,8 @@
     - Run following command
     * Execution
     ```
-    $ python lambdatest_test.py or nosetests test_sample.py
+    $ python lambdatest_test.py
+      nosetests lambdatest_test.py
     ```
 
 #####  Routing traffic through your local machine
