@@ -27,9 +27,16 @@ git clone https://github.com/LambdaTest/Python-UnitTest-Selenium.git
 
 Step 2. Next we create and Activate the virtual environment in the Python-UnitTest-Selenium folder.
 
+For Linux/MacOS
 ```
 virtualenv venv
 source venv/bin/activate
+```
+
+For Windows
+```
+python -m virtualenv venv
+venv\Scripts\activate.bat
 ```
 
 Step 3. Then install required packages.
@@ -49,10 +56,12 @@ export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 <p align="center">
    <b>For Windows:</b>
+   
 ```
 set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
+   
 Step 5. To run your first test.
 ```
 python lambdatest_test.py
