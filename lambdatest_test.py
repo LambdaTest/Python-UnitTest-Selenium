@@ -18,11 +18,19 @@ class FirstSampleTest(unittest.TestCase):
                 "build": "UnitTest-Selenium-Sample",
                 "name": "UnitTest-Selenium-Test",
                 "platformName": "Windows 11",
-                "selenium_version": "4.0.0"
+                "selenium_version": "4.0.0",
+                #Enable Smart UI Project
+                # "smartUI.project": "<Project Name>",
             },
             "browserName": "Chrome",
             "browserVersion": "latest",
         }
+
+        # Steps to run Smart UI project (https://beta-smartui.lambdatest.com/)
+        # Step - 1 : Change the hub URL to @beta-smartui-hub.lambdatest.com/wd/hub
+        # Step - 2 : Add "smartUI.project": "<Project Name>" as a capability above
+        # Step - 3 : Run "driver.execute_script("smartui.takeScreenshot")" command wherever you need to take a screenshot 
+        # Note: for additional capabilities navigate to https://www.lambdatest.com/support/docs/test-settings-options/
 
         self.driver = webdriver.Remote(
             command_executor="http://hub.lambdatest.com:80/wd/hub",
@@ -48,6 +56,9 @@ class FirstSampleTest(unittest.TestCase):
         # Click on check box
         check_box_two = driver.find_element_by_name("li2")
         check_box_two.click()
+
+        #Take Smart UI screenshot
+        #driver.execute_script("smartui.takeScreenshot")
 
         # Enter item in textfield
         textfield = driver.find_element_by_id("sampletodotext")
