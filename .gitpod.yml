@@ -4,7 +4,7 @@
 
 tasks:
   - init: pip install -r requirements.txt
-    command: python lambdatest_test.py && nosetests test_sample.py
+    command: nosetests lambdatest_test.py
 vscode:
   extensions:
     - ms-python.python
