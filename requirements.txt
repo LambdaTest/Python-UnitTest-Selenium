@@ -1,5 +1,5 @@
 ConfigParser
-selenium<3.13.0
+selenium<=4.9.0
 pytest
 nose
 pytest-xdist
