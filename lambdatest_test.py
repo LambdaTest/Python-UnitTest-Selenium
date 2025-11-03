@@ -11,7 +11,6 @@ access_key = os.environ.get("LT_ACCESS_KEY")
 
 
 class FirstSampleTest(unittest.TestCase):
-
     # setUp runs before each test case
     def setUp(self):
         lt_options = {
@@ -73,7 +72,7 @@ class FirstSampleTest(unittest.TestCase):
 
         # Verified added item
         added_item = driver.find_element(By.XPATH,
-            "//span[@class='done-false']").text
+            "//input[@name='li6']/following-sibling::span").text
         print(added_item)
 
 
