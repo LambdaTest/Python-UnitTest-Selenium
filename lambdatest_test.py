@@ -49,7 +49,7 @@ class FirstSampleTest(unittest.TestCase):
         driver = self.driver
 
         # Url
-        driver.get("https://lambdatest.github.io/sample-todo-app/")
+        driver.get("https://www.testmuai.com/selenium-playground/todo-app/")
 
         # Click on check box
         check_box_one = driver.find_element(By.NAME,"li1")
